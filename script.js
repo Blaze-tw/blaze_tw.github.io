@@ -1,5 +1,5 @@
 // ============ КОНФИГУРАЦИЯ ============
-const ADMIN_CODE = 'любовь';
+const ADMIN_CODE = 'я люблю аню';
 const STORAGE_KEY = 'anna_photos';
 const AUTH_KEY = 'anna_admin_auth';
 const GITHUB_REPO = 'Blaze-tw/blaze_tw.github.io';
