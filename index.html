@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя Любовь - Анна</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heart"></i> Моя Любовь
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Главная</a></li>
+                <li><a href="#gallery" class="nav-link">Галерея</a></li>
+                <li><a href="#admin" class="nav-link admin-link">Админ</a></li>
+                <li><span class="sync-status" id="syncStatus">🔄 Синхронизация</span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Главная страница -->
+    <section id="home" class="hero">
+        <div class="animated-hearts"></div>
+        
+        <div class="hero-content">
+            <div class="glass-card">
+                <h1 class="title">Анна</h1>
+                <p class="subtitle">Ты - моё счастье</p>
+                
+                <div class="love-letter">
+                    <p>Дорогая Анна!</p>
+                    <p>Я хотел бы поделиться с тобой моими чувствами. Каждый день с тобой - это чудо. Твоя улыбка озаряет мой мир, твоё присутствие делает жизнь полной смысла.</p>
+                    <p>Ты - моя вдохновение, моя радость, моя любовь. Спасибо за то, что ты есть в моей жизни.</p>
+                    <p style="margin-top: 30px; font-size: 24px;">💝</p>
+                </div>
+
+                <div class="hearts-decoration">
+                    <span class="heart">❤️</span>
+                    <span class="heart">💕</span>
+                    <span class="heart">💖</span>
+                    <span class="heart">💗</span>
+                    <span class="heart">💝</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея фотографий -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Наши Моменты</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Фото загружаются сюда -->
+            </div>
+            <div id="emptyGallery" class="empty-gallery">
+                <p>Пока фотографий нет. Загрузите первую фото в админ панели! 📸</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Админ панель (скрытая) -->
+    <section id="admin" class="admin-section hidden">
+        <div class="admin-container">
+            <div class="admin-card">
+                <div class="admin-header">
+                    <h2>Админ Панель</h2>
+                    <button class="close-admin" id="closeAdmin">✕</button>
+                </div>
+
+                <div class="admin-content">
+                    <div class="admin-form">
+                        <h3>Введите код доступа</h3>
+                        <input type="password" id="adminCode" placeholder="Код доступа (любовь)" maxlength="20">
+                        <button class="btn-login" id="adminLogin">Вход</button>
+                    </div>
+
+                    <div class="admin-panel hidden" id="adminPanel">
+                        <h3>Управление Галереей</h3>
+                        
+                        <!-- Статус синхронизации -->
+                        <div class="sync-info">
+                            <h4>📡 Статус Синхронизации</h4>
+                            <div id="syncInfo" class="sync-details">
+                                <p>Загрузка информации...</p>
+                            </div>
+                        </div>
+
+                        <div class="upload-section">
+                            <h4>Загрузить фото</h4>
+                            <div class="file-input-wrapper">
+                                <input type="file" id="photoInput" accept="image/*" multiple>
+                                <label for="photoInput" class="file-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    Выберите фото
+                                </label>
+                            </div>
+                            <div class="preview-container" id="previewContainer"></div>
+                            <button class="btn-upload" id="uploadBtn" disabled>Загрузить</button>
+                        </div>
+
+                        <div class="gallery-management">
+                            <h4>Управление фото</h4>
+                            <div class="photos-list" id="photosList"></div>
+                        </div>
+
+                        <button class="btn-logout" id="adminLogout">Выход</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Пасхалка: кнопка для появления админ панели -->
+    <div class="easter-egg">
+        <button id="easterEggBtn" title="Пасхалка для входа в админ панель">🔓</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
